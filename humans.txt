@@ -1,0 +1,14 @@
+/* humanstxt.org */                          
+/* TEAM */                          
+Developer: Cassandra King                          
+Site: cassandraking.net
+Email: cassandra.ramirez.king@gmail.com                           
+Twitter: @ca55king                          
+Location: Philadelphia, USA
+							
+                            
+/* SITE */
+                        
+Standards: HTML5, CSS3                          
+Components: Modernizr, jQuery, JSPanel Plugin, TouchSwipe Plugin, Normalize                        
+Software: SublimeText2
