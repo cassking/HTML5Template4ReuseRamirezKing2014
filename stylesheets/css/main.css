@@ -7,6 +7,9 @@
   and http://html5boilerplate.com/
 
 ========================================================================== */
+/*    Horiz/Vert/Blur/Spread*/
+/*columns mixins*/
+/*legal values are 1, all*/
 /* Twitter bootstrap uses these */
 @import url(../../fonts/fonts.css);
 @import url(../../fonts/font-awesome.css);
@@ -587,7 +590,8 @@ header[role="banner"] {
   float: left;
   padding-left: 10px;
   padding-right: 10px;
-  border: 1px solid #80b7e8; }
+  border: 1px solid #80b7e8;
+  min-width: 7.45em; }
 
 /* Columns */
 .col-1 {
@@ -604,6 +608,7 @@ header[role="banner"] {
 
 .col-3 {
   width: 25%;
+  min-width: 11em;
   width: calc(100% / 12 * 3);
   width: -webkit-calc(100% / 12 * 3);
   width: -moz-calc(100% / 12 * 3); }
@@ -622,6 +627,7 @@ header[role="banner"] {
 
 .col-6 {
   width: 50%;
+  min-width: 22em;
   width: calc(100% / 12 * 6);
   width: -webkit-calc(100% / 12 * 6);
   width: -moz-calc(100% / 12 * 6); }
@@ -661,6 +667,7 @@ header[role="banner"] {
 
 /* Rows */
 .row {
+  min-width: 33%;
   padding-top: 1em;
   padding-bottom: 1em; }
 
@@ -752,11 +759,23 @@ nter-text {
   left: -9999em; }
 
 /* ==========================================================================
-/*Small devices (tablets, 768px and up) */
+/* mobile landscape 30em;//480px  and down) */
 /* ========================================================================== */
-@media screen and (min-width: 48em) {
+/*$tablet-container-width:              48em;//768px /* Small devices (tablets, 768px and up) */
+/*$desktop-container-width:             62em;//992px /* Medium devices (desktops, 992px and up) */
+/*$large-container-width:               75em;//1200px /* Large devices (large desktops, 1200px and up) */
+@media screen and (max-width: 30em) {
+  /*set any custom styles for landscape mobile*/ }
+/* ==========================================================================
+/*Small devices (tablets,  48em;//768px and down) */
+/* ========================================================================== */
+/*$tablet-container-width:              48em;//768px /* Small devices (tablets, 768px and up) */
+/*$desktop-container-width:             62em;//992px /* Medium devices (desktops, 992px and up) */
+/*$large-container-width:               75em;//1200px /* Large devices (large desktops, 1200px and up) */
+@media screen and (max-width: 48em) {
+  /*48em*/
   .container {
-    min-width: 48em;
+    max-width: 48em;
     padding-left: 20px;
     padding-right: 20px;
     /* comment these below if not using panel menu*/
@@ -851,12 +870,20 @@ nter-text {
     width: 100%; }
 
   /* End tablet Media Query */ }
+/*$tablet-container-width:              48em;//768px /* Small devices (tablets, 768px and up) */
+/*$desktop-container-width:             62em;//992px /* Medium devices (desktops, 992px and up) */
+/*$large-container-width:               75em;//1200px /* Large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 48em) {
+  .container {
+    min-width: 50em;
+    max-width: 62em; } }
+/* ==========================================================================*/
+/*$tablet-container-width:              48em;//768px /* Small devices (tablets, 768px and up) */
+/*$desktop-container-width:             62em;//992px /* Medium devices (desktops, 992px and up) */
+/*$large-container-width:               75em;//1200px /* Large devices (large desktops, 1200px and up) */
 @media screen and (min-width: 62em) {
   .container {
     min-width: 62em; } }
-@media screen and (min-width: 75em) {
-  .container {
-    min-width: 75em; } }
 /* ==|== print styles =======================================================
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r

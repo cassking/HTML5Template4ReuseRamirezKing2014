@@ -594,6 +594,7 @@ header[role="banner"] {
   padding-left: 10px;
   padding-right: 10px;
   border: 1px solid $bluelight;
+  min-width:7.45em;
 }
 
 /* Columns */
@@ -611,6 +612,7 @@ header[role="banner"] {
 }
 .col-3 {
   width: 25%; // Fallback if Calc() is not supported
+  min-width: 11em;
   width: calc(100% / 12 * 3);
   width: -webkit-calc(100% / 12 * 3);
   width: -moz-calc(100% / 12 * 3);
@@ -629,6 +631,7 @@ header[role="banner"] {
 }
 .col-6 {
   width: 50%; // Fallback if Calc() is not supported
+  min-width: 22em;
   width: calc(100% / 12 * 6);
   width: -webkit-calc(100% / 12 * 6);
   width: -moz-calc(100% / 12 * 6);
@@ -663,10 +666,11 @@ header[role="banner"] {
   width: -webkit-calc(100% / 12 * 11);
   width: -moz-calc(100% / 12 * 11);
 }
-.col-12 { width: 100%; }
+.col-12 { width: 100%;  }
 
 /* Rows */
 .row {
+  min-width: 33%;
   padding-top: 1em;
   padding-bottom: 1em;
 }
@@ -755,15 +759,29 @@ nter-text { text-align: center; }
   width: 1px;
   left: -9999em;
 }
+/* ==========================================================================
+/* mobile landscape 30em;//480px  and down) */ 
+/* ========================================================================== */
+/*$tablet-container-width:              48em;//768px /* Small devices (tablets, 768px and up) */
+/*$desktop-container-width:             62em;//992px /* Medium devices (desktops, 992px and up) */
+/*$large-container-width:               75em;//1200px /* Large devices (large desktops, 1200px and up) */
+
+@media screen and (max-width: 30em) {
+/*set any custom styles for landscape mobile*/
+}
 
 
 /* ==========================================================================
-/*Small devices (tablets, 768px and up) */
+/*Small devices (tablets,  48em;//768px and down) */
 /* ========================================================================== */
-@media screen and (min-width: $tablet-container-width) {
+/*$tablet-container-width:              48em;//768px /* Small devices (tablets, 768px and up) */
+/*$desktop-container-width:             62em;//992px /* Medium devices (desktops, 992px and up) */
+/*$large-container-width:               75em;//1200px /* Large devices (large desktops, 1200px and up) */
+
+@media screen and (max-width: $tablet-container-width) {/*48em*/
 
 .container {
-  min-width: $tablet-container-width;
+  max-width: $tablet-container-width;
   padding-left: 20px;
   padding-right: 20px;
    /* comment these below if not using panel menu*/
@@ -865,11 +883,16 @@ nter-text { text-align: center; }
 /* ==========================================================================
 //* Desktop Styles
 //* ==========================================================================*/
-@media screen and (min-width: $desktop-container-width) {
+/*$tablet-container-width:              48em;//768px /* Small devices (tablets, 768px and up) */
+/*$desktop-container-width:             62em;//992px /* Medium devices (desktops, 992px and up) */
+/*$large-container-width:               75em;//1200px /* Large devices (large desktops, 1200px and up) */
+
+@media screen and (min-width: $tablet-container-width) {
 // Desktop Styles
 
    .container {
-    min-width: $desktop-container-width;
+    min-width: 50em;
+    max-width: 62em;
   }
 
 
@@ -877,12 +900,16 @@ nter-text { text-align: center; }
  
  /* ==========================================================================
 //* Large devices (large desktops, 1200px and up) */
-//* ==========================================================================*/
-@media screen and (min-width: $large-container-width) {
+/* ==========================================================================*/
+/*$tablet-container-width:              48em;//768px /* Small devices (tablets, 768px and up) */
+/*$desktop-container-width:             62em;//992px /* Medium devices (desktops, 992px and up) */
+/*$large-container-width:               75em;//1200px /* Large devices (large desktops, 1200px and up) */
+
+@media screen and (min-width: $desktop-container-width) {
 // Large Styles
 
    .container {
-    min-width: $large-container-width;
+    min-width: $desktop-container-width;
   }
 
 

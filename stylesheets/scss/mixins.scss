@@ -1,12 +1,9 @@
 // ==========================================================================
 
-//  Base Mixins - built with SASS - http://sass-lang.com/
-//  Theme URI: http://git.io/base
-//  Author: Matthew Hartman - http://www.matthewhartman.com.au/
-//  Version: 0.1 - Last Updated: 7th June, 2013
+//  Useful Mixins - built with SASS/SCSS - http://sass-lang.com/
 
 // ==========================================================================
-
+//feel free to substitute em for rem
 // Font Sizes (REMs with PX fallback for older browsers)
 @mixin font-size($size) {
     font-size: $size + px;
@@ -23,9 +20,11 @@
 @mixin rounded($radius) {
   -webkit-border-radius: ($radius) + px;
   -moz-border-radius: ($radius) + px;
+  -o-border-radius: ($radius) + px;
+  -ms-border-radius: ($radius) + px;
   border-radius: ($radius) + px;
 }
-
+//Clearfix
 @mixin clearfix {
   &:after {
     content: "";
@@ -33,4 +32,75 @@
     *zoom: 1;
     clear: both;
   }
+}
+//Box Shadow
+ /*    Horiz/Vert/Blur/Spread*/
+@mixin box-shadow-custom($horizontal: 0px, $vertical: 1px, $blur: 2px, $color: rgba(0,0,0,0.9)) {
+    -webkit-box-shadow: $horizontal $vertical $blur $color;
+    -moz-box-shadow:  $horizontal $vertical $blur $color;
+    -o-box-shadow: $horizontal $vertical $blur $color;
+    -ms-box-shadow: $horizontal $vertical $blur $color;
+    box-shadow: $horizontal $vertical $blur $color;
+}
+//Transform Rotate
+@mixin rotate($transform-angle) {
+    -webkit-transform:rotate($transform-angle);
+    -moz-transform:rotate($transform-angle);
+    -ms-transform:rotate($transform-angle);
+    -o-transform:rotate($transform-angle);
+    transform:rotate($transform-angle);
+}
+//Transition
+@mixin transition($transition-property, $transition-time, $method, $transition-delay) {
+    -webkit-transition: $transition-property $transition-time $method $transition-delay;
+    -moz-transition: $transition-property $transition-time $method $transition-delay;
+    -ms-transition: $transition-property $transition-time $method $transition-delay;
+    -o-transition: $transition-property $transition-time $method $transition-delay;
+    transition: $transition-property $transition-time $method $transition-delay;
+}
+//Transform Scale
+@mixin scale($transform-scale-newsize) {
+    -webkit-transform:scale($transform-scale-newsize);
+    -moz-transform:scale($transform-scale-newsize);
+    -ms-transform:scale($transform-scale-newsize);
+    -o-transform:scale($transform-scale-newsize);
+    transform:scale($transform-scale-newsize);
+}
+//Transform rotate, scale, skew, moveX, moveY
+@mixin transform ($rotate: 90deg, $scale: 1, $skew: 1deg, $translateX: 10px, $translateY: 10px ) {
+  -webkit-transform: rotate($rotate) scale($scale) skew($skew) translateX($translateX) translateY($translateY);
+  -moz-transform: rotate($rotate) scale($scale) skew($skew) translateX($translateX) translateY($translateY);
+  -o-transform: rotate($rotate) scale($scale) skew($skew) translateX($translateX) translateY($translateY);
+  -ms-transform: rotate($rotate) scale($scale) skew($skew) translateX($translateX) translateY($translateY); 
+  transform: rotate($rotate) scale($scale) skew($skew) translateX($translateX) translateY($translateY);
+}
+/*columns mixins*/
+@mixin columns($count) {
+    -webkit-column-count:$count; /* Chrome, Safari, Opera */
+    -moz-column-count:$count; /* Firefox */
+    -o-column-count:$count;
+    -ms-column-count:$count;
+    column-count:$count;
+}
+/*legal values are 1, all*/
+@mixin column-span($columns) {
+    -webkit-column-span:$columns; /* Chrome, Safari, Opera */
+    -moz-column-span:$columns; /* Firefox */
+    -o-column-span:$columns;
+    -ms-column-span:$columns;
+    column-span:$columns;  
+}
+@mixin column-gap($gap) {
+    -webkit-column-gap:$gap; /* Chrome, Safari, Opera */
+    -moz-column-gap:$gap; /* Firefox */
+    -o-column-gap:$gap;
+    -ms-column-gap:$gap;
+    column-gap:$gap;
+}
+@mixin column-rule($width, $style, $color) {
+    -webkit-column-rule: $width,$style, $color;
+    -moz-column-rule: $width,$style, $color;
+    -o-column-rule: $width,$style, $color;
+    -ms-column-rule: $width,$style, $color;
+    column-rule: $width,$style, $color;
 }
