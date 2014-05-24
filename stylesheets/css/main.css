@@ -678,7 +678,8 @@ footer {
   position: relative;
   margin: 20px auto;
   width: 100%;
-  border: 1px solid #80b7e8; }
+  float: left;
+  /*min-width: 47em;*/ }
   footer:after {
     content: "";
     display: table;
@@ -690,9 +691,10 @@ footer {
     display: block; }
     footer nav ul {
       margin: 0 auto;
-      padding: 20px;
+      padding: 1.25em;
+      /*20px*/
       text-align: center;
-      width: 70%; }
+      width: 100%; }
       footer nav ul:after {
         content: "";
         display: table;
@@ -710,16 +712,50 @@ footer {
           clear: both; }
         footer nav ul li a {
           display: block;
+          position: relative;
           text-transform: uppercase;
-          background: white;
+          background: transparent;
           text-decoration: none;
           color: #032d57;
-          padding: 15px 30px;
+          padding: 15px 1.875em;
+          /*1.875em / 30px*/
           margin: 0;
           border: none; }
-          footer nav ul li a:hover {
-            padding: 15px 30px;
-            color: white; }
+          footer nav ul li a span {
+            text-indent: -9999px;
+            display: block;
+            visibility: hidden; }
+          footer nav ul li a:hover, footer nav ul li a:focus {
+            padding: 15px 1.875em;
+            /*1.875em / 30px*/
+            background: transparent;
+            color: #80b7e8; }
+            footer nav ul li a:hover span, footer nav ul li a:focus span {
+              position: absolute;
+              top: -30px;
+              left: 20%;
+              text-indent: 0;
+              text-transform: lowercase;
+              display: block;
+              padding: 5px;
+              background: #80b7e8;
+              color: #032d57;
+              -webkit-border-radius: 8px;
+              -moz-border-radius: 8px;
+              -o-border-radius: 8px;
+              -ms-border-radius: 8px;
+              border-radius: 8px;
+              visibility: visible; }
+              footer nav ul li a:hover span:after, footer nav ul li a:focus span:after {
+                content: ' ';
+                width: 0;
+                height: 0;
+                position: absolute;
+                bottom: -5px;
+                left: 12%;
+                border-left: 10px solid transparent;
+                border-right: 10px  solid transparent;
+                border-top: 10px solid #80b7e8; }
           footer nav ul li a:after {
             /*default:github*/
             content: "\f113";

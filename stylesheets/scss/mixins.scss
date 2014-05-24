@@ -1,9 +1,12 @@
 // ==========================================================================
 
-//  Useful Mixins - built with SASS/SCSS - http://sass-lang.com/
+//  Base Mixins - built with SASS - http://sass-lang.com/
+//  Theme URI: http://git.io/base
+//  Author: Matthew Hartman - http://www.matthewhartman.com.au/
+//  Version: 0.1 - Last Updated: 7th June, 2013
 
 // ==========================================================================
-//feel free to substitute em for rem
+
 // Font Sizes (REMs with PX fallback for older browsers)
 @mixin font-size($size) {
     font-size: $size + px;

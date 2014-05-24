@@ -682,34 +682,67 @@ footer {
   position: relative;
   margin: 20px auto;
   width: 100%;
+  float: left;
+  /*min-width: 47em;*/
   @include clearfix;
-    border: 1px solid $bluelight;
   nav {
     overflow: visible;
     margin: 0 auto;
     display: block;
     ul {
         margin: 0 auto;
-        padding: 20px;
+        padding: 1.25em;/*20px*/
         text-align: center;
-        width: 70%;
+        width: 100%;
         @include clearfix;
       li {
          overflow: visible;
-        display: inline-block;
-        @include clearfix;
+          display: inline-block;
+          @include clearfix;
         a {
             display: block;
+            position: relative;
             text-transform: uppercase;
-            background: $white;
+            background: transparent;
             text-decoration: none;
             color: $bluedeep;
-            padding: 15px 30px;
+            padding: 15px 1.875em; /*1.875em / 30px*/
             margin: 0;
             border: none;
-            &:hover {
-              padding: 15px 30px;
-              color: $white;
+            span {
+               text-indent: -9999px;
+               display: block; 
+                visibility: hidden;
+            }
+            &:hover,
+            &:focus {
+              padding: 15px 1.875em ;/*1.875em / 30px*/
+              background: transparent;
+              color: $bluelight;
+              span {
+                position: absolute;
+                top: -30px;
+                left: 20%;
+                text-indent: 0;
+                text-transform: lowercase;
+                display: block; 
+                padding: 5px;
+                background: $bluelight;
+                color: $bluedeep;
+                @include rounded(8);
+                visibility: visible;
+                &:after {
+                  content: ' ';
+                  width: 0;
+                  height: 0;
+                  position: absolute;
+                  bottom: -5px;
+                  left: 12%;
+                  border-left: 10px solid transparent;
+                  border-right: 10px  solid transparent;
+                  border-top: 10px solid $bluelight;
+                }
+              }
             }
             &:after {
                /*default:github*/

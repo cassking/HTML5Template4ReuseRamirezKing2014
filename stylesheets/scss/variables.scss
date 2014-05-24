@@ -1,9 +1,10 @@
 
   // Global Defaults
 /* Twitter bootstrap uses these */
-  $tablet-container-width:              48em;//768px /* Small devices (tablets, 768px and up) */
-  $desktop-container-width:             62em;//992px /* Medium devices (desktops, 992px and up) */
-  $large-container-width:               75em;//1200px /* Large devices (large desktops, 1200px and up) */
+$mobile-landscape-container-width: 		30em;//480px /*mobile landscape*/
+$tablet-container-width:              48em;//768px /* Small devices (tablets, 768px and up) */
+$desktop-container-width:             62em;//992px /* Medium devices (desktops, 992px and up) */
+$large-container-width:               75em;//1200px /* Large devices (large desktops, 1200px and up) */
 
 //Color 
 
@@ -17,7 +18,12 @@ $bluelight: #80B7E8;
 $bluemedium: #4E98DE;
 $bluedark: #2169B0;
 $bluedeep: #032D57;
-$yellow: #F5B30C;
+$yellow: #F6B618;
+$orange: #FF7A00;
+$redish: #E52E26;
+$jade: #039776;
+$lime: #B1CA2A;
+
 
 //Font  
 
